@@ -14,7 +14,7 @@ The Money Tracking Application is a console-based program designed to help users
   - Edit or remove existing transactions.
 - **Balance Calculation**: Automatically calculates the net balance based on incomes and expenses.
 - **Transaction Sorting**:
-  - View transactions sorted by oldest first or newest first.
+  - View transactions sorted by newest first.
 - **Data Persistence**: All transactions are saved to a JSON file and loaded automatically when the application starts.
 - **Customizable PIN**: Users can change their PIN from the settings menu.
 
