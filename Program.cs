@@ -3,23 +3,32 @@
 List<Transaction> transactions = TransactionManager.LoadTransactions();
 //List<Transaction> transactions = new List<Transaction>();
 bool running = true;
+
+
 if (!TransactionManager.Login())
 {
     return; // Exit the program if login fails
 }
 
+
 while (running)
 {
+    Console.WriteLine("*********************************************");
     Console.WriteLine("Welcome to TrackMoney");
+    Console.ForegroundColor = ConsoleColor.Yellow;
     Console.WriteLine($"Current Balance: {TransactionManager.CalculateBalance(transactions):C}");
+    Console.ResetColor();
+    Console.ForegroundColor = ConsoleColor.Cyan;
     Console.WriteLine("1) Show items (All/Expenses/Incomes)");
     Console.WriteLine("2) Add New Expense/Income");
     Console.WriteLine("3) Edit Item (edit, remove)");
     Console.WriteLine("4) Change pin");
     Console.WriteLine("5) Save and Quit");
     Console.Write("Choose an option: ");
-
     var choice = Console.ReadLine();
+    Console.ResetColor();
+
+    
 
 
     switch (choice)
